@@ -13,6 +13,19 @@ public class UserInput : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Debug.Log("space key");
+        }
+
+         if (Input.GetKey(KeyCode.E))
+        {
+            Debug.Log("Holding E");
+        }
+
+         if (Input.GetKeyUp(KeyCode.F))
+        {
+            Debug.Log("f");
+        }
     }
 }
