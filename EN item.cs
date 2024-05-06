@@ -2,17 +2,32 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
 public class item : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public string name;
+    public int ID;
+    public Sprite icon;
 
-    // Update is called once per frame
-    void Update()
+    public enum ItemType
     {
-        
+        None,
+        Weapon,
+        Consumable,
+    }
+    public ItemType itemtype;
+
+    public void Action()
+    {
+        switch(ItemType)
+        {
+            case ItemType.Weapon:
+            Debug.Log("This is a: " + itemtype);
+            break;
+
+            case ItemType.Consumable:
+            Debug.Log("This is a consumable");
+            break;
+        }
     }
 }
